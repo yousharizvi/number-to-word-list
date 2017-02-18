@@ -1,0 +1,22 @@
+<h1>
+  {{title}}
+</h1>
+<div>
+  <div>
+    <label for="input">
+      Enter words as number:
+      <input type="text" [(ngModel)]="input" (keyup)="onWordsInputType(input)"/>
+    </label>
+  </div>
+  <div>
+    <label for="includeInvalid">
+      Include invalid words: 
+      <input type="checkbox" [(ngModel)]="includeInvalid" (click)="onWordsInputType(input)"/>
+    </label>
+  </div>
+  <div>
+    <p *ngFor="let word of words">
+      {{word}}
+    </p>
+  </div>
+</div>
